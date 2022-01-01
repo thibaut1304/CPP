@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/01/01 17:07:55 by thhusser         ###   ########.fr        #
+#    Created: 2022/01/01 17:43:12 by thhusser          #+#    #+#              #
+#    Updated: 2022/01/01 18:21:09 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,12 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37mÓ
 
-NAME	=	megaphone
+NAME	=	PhoneBook
 
-SRCS	=	megaphone.cpp
+SRCS	=	main.cpp \
+			add_contact.cpp \
+			Phonebook.cpp \
+			
 
 OBJS	=	${SRCS:.cpp=.o}
 
@@ -31,7 +34,7 @@ RM		=	rm -f
 
 CC		=	clang++
 
-HEADER	=	
+HEADER	=	-I Phonebook.h
 
 .c.o:
 			@printf "$(_WHITE)Generating $(NAME) objects... %-33.33s\r$(_NC)" $@
