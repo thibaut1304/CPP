@@ -6,24 +6,21 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:18:07 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/01 18:48:04 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/01/01 23:19:10 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-
 #include "Phonebook.h"
 
-int main(int argc, char **argv)
+int main()
 {
     std::string str;
     int index(0);
 
     Phonebook contact[MAX_CONTACT];
-
     while (1)
     {
+
         std::cout << "$> ";
         std::getline(std::cin, str);
         if (str == "ADD" || str == "SEARCH")

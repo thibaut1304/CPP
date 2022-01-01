@@ -6,27 +6,11 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:43:06 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/01 18:44:08 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/01/01 23:19:29 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.h"
-
-    // public:
-
-    // Phonebook();
-    // void    add();
-    // void    search() const;
-    // ~Phonebook();
-    
-    // private:
-
-    // int index;
-    // std::string first_name;
-    // std::string last_name;
-    // std::string nickname;
-    // std::string phone_number;
-    // std::string darkest_secret;
 
 Phonebook::Phonebook() {
 }

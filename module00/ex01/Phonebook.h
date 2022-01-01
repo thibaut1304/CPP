@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:19:58 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/01 18:43:41 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/01/01 23:19:33 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 # define PHONEBOOK_H
 
 # define MAX_CONTACT 8
+# define WIDTH 10
 
-#include <string>
-#include <iostream>
-
-//    std::string FN;
-//     std::string LN;
-//     std::string NN;
-//     std::string PN;
-//     std::string DS;
+# include <string>
+# include <iostream>
+# include <iomanip>
 
 class Phonebook
 {

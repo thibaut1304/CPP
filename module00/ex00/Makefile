@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/01/01 17:18:29 by thhusser         ###   ########.fr        #
+#    Updated: 2022/01/01 19:02:30 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ HEADER	=
 
 ${NAME}:	${OBJS}
 			@echo ""
-			@$(CC) $(FLAGS) $(HEADER) $(OBJS) -o $(NAME)
+			@$(CC) $(CFLAGS) $(HEADER) $(OBJS) -o $(NAME)
 			@echo "$(_GREEN)Generating $(NAME)$(_NC)"
 
 all:		${NAME}

@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 17:43:12 by thhusser          #+#    #+#              #
-#    Updated: 2022/01/01 18:21:09 by thhusser         ###   ########.fr        #
+#    Updated: 2022/01/01 19:02:22 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ HEADER	=	-I Phonebook.h
 
 ${NAME}:	${OBJS}
 			@echo ""
-			@$(CC) $(FLAGS) $(HEADER) $(OBJS) -o $(NAME)
+			@$(CC) $(CFLAGS) $(HEADER) $(OBJS) -o $(NAME)
 			@echo "$(_GREEN)Generating $(NAME)$(_NC)"
 
 all:		${NAME}
