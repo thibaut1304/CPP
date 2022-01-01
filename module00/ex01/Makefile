@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 17:43:12 by thhusser          #+#    #+#              #
-#    Updated: 2022/01/01 19:02:22 by thhusser         ###   ########.fr        #
+#    Updated: 2022/01/01 23:34:35 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ _YELLOW=\033[0;33m
 _BLUE=\033[0;34m
 _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
-_WHITE=\033[0;37mÓ
+_WHITE=\033[0;37m
 
 NAME	=	PhoneBook
 
@@ -36,7 +36,7 @@ CC		=	clang++
 
 HEADER	=	-I Phonebook.h
 
-.c.o:
+.cpp.o:
 			@printf "$(_WHITE)Generating $(NAME) objects... %-33.33s\r$(_NC)" $@
 			@$(CC) ${CFLAGS} ${HEADER} -c $< -o $(<:.cpp=.o)
 

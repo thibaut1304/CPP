@@ -6,13 +6,13 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 18:06:07 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/01 23:20:05 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/01/01 23:43:01 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.h"
     
-Phonebook add() {
+Phonebook add_contact() {
     Phonebook new_contact;
     std::string FN;
     std::string LN;
@@ -62,6 +62,7 @@ static void print_contact(Phonebook contact[], int nb) {
         std::cout << std::endl;
         index++;
     }
+    std::cout << std::endl;
 }
 
 void    search(Phonebook contact[], int nb) {

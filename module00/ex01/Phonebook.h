@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:19:58 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/01 23:19:33 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/01/01 23:43:07 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ class Phonebook
     
     private:
 
-    int index;
     std::string first_name;
     std::string last_name;
     std::string nickname;
@@ -42,7 +41,7 @@ class Phonebook
     std::string darkest_secret;
 };
 
-Phonebook   add(void);
+Phonebook   add_contact(void);
 void        search(Phonebook contact[], int index);
 
 #endif
