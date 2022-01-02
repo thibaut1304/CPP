@@ -6,11 +6,11 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:43:06 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/01 23:19:29 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/01/02 16:39:06 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.h"
+#include "Phonebook.hpp"
 
 Phonebook::Phonebook() {
 }

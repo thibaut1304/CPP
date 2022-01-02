@@ -6,11 +6,11 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 18:06:07 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/02 16:32:09 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/01/02 16:38:57 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.h"
+#include "Phonebook.hpp"
     
 Phonebook add_contact() {
     Phonebook new_contact;
