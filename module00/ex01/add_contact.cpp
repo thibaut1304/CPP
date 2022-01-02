@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 18:06:07 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/01 23:43:01 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/01/02 16:32:09 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,5 @@ void    search(Phonebook contact[], int nb) {
         std::cout << "Darkest Secret : " << contact[id].getDarkest_secret() << std::endl;
     }
     else
-        std::cout << "Number of contact is invalid" << std::endl;
+        std::cout << "Index of contact is invalid" << std::endl;
 }

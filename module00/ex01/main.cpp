@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:18:07 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/01 23:43:14 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/01/02 16:33:56 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int main()
     Phonebook contact[MAX_CONTACT];
     while (1)
     {
-
-        std::cout << "$> ";
+        if (str != "ADD" && str != "SEARCH")
+            std::cout << "$> ";
         std::getline(std::cin, str);
         if (str == "ADD" || str == "SEARCH")
         {
