@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/01/01 23:35:02 by thhusser         ###   ########.fr        #
+#    Updated: 2022/04/07 16:27:57 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,15 +31,13 @@ RM		=	rm -f
 
 CC		=	clang++
 
-HEADER	=	
-
 .cpp.o:
 			@printf "$(_WHITE)Generating $(NAME) objects... %-33.33s\r$(_NC)" $@
-			@$(CC) ${CFLAGS} ${HEADER} -c $< -o $(<:.cpp=.o)
+			@$(CC) ${CFLAGS} -c $< -o $(<:.cpp=.o)
 
 ${NAME}:	${OBJS}
 			@echo ""
-			@$(CC) $(CFLAGS) $(HEADER) $(OBJS) -o $(NAME)
+			@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 			@echo "$(_GREEN)Generating $(NAME)$(_NC)"
 
 all:		${NAME}

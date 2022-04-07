@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 17:43:12 by thhusser          #+#    #+#              #
-#    Updated: 2022/01/02 16:38:47 by thhusser         ###   ########.fr        #
+#    Updated: 2022/04/07 16:28:50 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ NAME	=	PhoneBook
 SRCS	=	main.cpp \
 			add_contact.cpp \
 			Phonebook.cpp \
-			
+
 
 OBJS	=	${SRCS:.cpp=.o}
 
@@ -34,15 +34,13 @@ RM		=	rm -f
 
 CC		=	clang++
 
-HEADER	=	-I Phonebook.hpp
-
 .cpp.o:
 			@printf "$(_WHITE)Generating $(NAME) objects... %-33.33s\r$(_NC)" $@
-			@$(CC) ${CFLAGS} ${HEADER} -c $< -o $(<:.cpp=.o)
+			@$(CC) ${CFLAGS} -c $< -o $(<:.cpp=.o)
 
 ${NAME}:	${OBJS}
 			@echo ""
-			@$(CC) $(CFLAGS) $(HEADER) $(OBJS) -o $(NAME)
+			@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 			@echo "$(_GREEN)Generating $(NAME)$(_NC)"
 
 all:		${NAME}
