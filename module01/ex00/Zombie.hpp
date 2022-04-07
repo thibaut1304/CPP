@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 16:50:38 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/07 16:53:48 by thhusser         ###   ########.fr       */
+/*   Created: 2022/04/07 16:37:31 by thhusser          #+#    #+#             */
+/*   Updated: 2022/04/07 16:40:54 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef _ZOMBIE_HPP
+# define _ZOMBIE_HPP
 
-void	randomChump(std::string name);
-Zombie*	newZombie( std::string name);
+# include <iostream>
 
-int	main( void )
-{
-	std::cout <<  "*** Zombie on the Heap ***" << std::endl;
-	Zombie	*z = newZombie("Thibaut");
-	z->announce();
-	delete z;
-	std::cout << "*** Zombie on the stack ***" << std::endl;
-	randomChump("Alex");
-	return (0);
-}
+class Zombie {
+
+	public:
+
+	Zombie(std::string);
+	~Zombie(void);
+
+	void	announce(void) const;
+
+	private:
+
+	std::string	_name;
+};
+
+#endif

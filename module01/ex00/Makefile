@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/01/01 17:43:12 by thhusser          #+#    #+#              #
-#    Updated: 2022/01/02 16:38:47 by thhusser         ###   ########.fr        #
+#    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
+#    Updated: 2022/04/07 16:54:03 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,12 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37m
 
-NAME	=	PhoneBook
+NAME	= 	Zombie
 
-SRCS	=	main.cpp \
-			add_contact.cpp \
-			Phonebook.cpp \
-			
+SRCS	= 	Zombie.cpp \
+			newZombie.cpp \
+			randomChump.cpp \
+			main.cpp \
 
 OBJS	=	${SRCS:.cpp=.o}
 
@@ -34,15 +34,13 @@ RM		=	rm -f
 
 CC		=	clang++
 
-HEADER	=	-I Phonebook.hpp
-
 .cpp.o:
 			@printf "$(_WHITE)Generating $(NAME) objects... %-33.33s\r$(_NC)" $@
-			@$(CC) ${CFLAGS} ${HEADER} -c $< -o $(<:.cpp=.o)
+			@$(CC) ${CFLAGS} -c $< -o $(<:.cpp=.o)
 
 ${NAME}:	${OBJS}
 			@echo ""
-			@$(CC) $(CFLAGS) $(HEADER) $(OBJS) -o $(NAME)
+			@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 			@echo "$(_GREEN)Generating $(NAME)$(_NC)"
 
 all:		${NAME}
