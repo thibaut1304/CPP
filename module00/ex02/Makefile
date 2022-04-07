@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/01/01 23:35:09 by thhusser         ###   ########.fr        #
+#    Updated: 2022/04/07 16:20:42 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,10 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37m
 
-NAME	=
+NAME	= 	GlobalBanksters_United
 
-SRCS	=
+SRCS	= 	tests.cpp \
+			Account.cpp \
 
 OBJS	=	${SRCS:.cpp=.o}
 
@@ -31,15 +32,13 @@ RM		=	rm -f
 
 CC		=	clang++
 
-HEADER	=	
-
 .cpp.o:
 			@printf "$(_WHITE)Generating $(NAME) objects... %-33.33s\r$(_NC)" $@
-			@$(CC) ${CFLAGS} ${HEADER} -c $< -o $(<:.cpp=.o)
+			@$(CC) ${CFLAGS} -c $< -o $(<:.cpp=.o)
 
 ${NAME}:	${OBJS}
 			@echo ""
-			@$(CC) $(CFLAGS) $(HEADER) $(OBJS) -o $(NAME)
+			@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 			@echo "$(_GREEN)Generating $(NAME)$(_NC)"
 
 all:		${NAME}
