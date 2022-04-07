@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:18:07 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/02 16:39:01 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/07 13:25:19 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int main()
         {
             if (str == "ADD" && index < MAX_CONTACT)
                 contact[index++] = add_contact();
+            else if (str == "ADD" && index >= MAX_CONTACT)
+                contact[index - 1] = add_contact();
             if (str == "SEARCH" && index > 0)
                 search(contact, index);
         }
