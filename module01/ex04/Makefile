@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/04/08 18:43:29 by thhusser         ###   ########.fr        #
+#    Updated: 2022/04/08 21:09:47 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ ifneq ($(wildcard $(NAME)),)
 		@${RM} ${NAME};
 		@echo "$(_GREEN)Delete $(NAME)$(_NC)"
 endif
+		@$(RM) *.replace
 
 re:			fclean all
 
