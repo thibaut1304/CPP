@@ -2,5 +2,18 @@ a.out
 *.o
 *.a
 .DS_Store
+
+# Module00
+
 megaphone
 PhoneBook
+GlobalBanksters_United
+
+# Module01
+zombie
+zombieHorde
+brain
+violence
+*.replace
+replace
+harl
