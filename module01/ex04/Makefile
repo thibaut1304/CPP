@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/04/08 00:39:57 by thhusser         ###   ########.fr        #
+#    Updated: 2022/04/08 18:43:29 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,11 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37m
 
-NAME	= 	violence
+NAME	= 	replace
 
-SRCS	=
+SRCS	=	main.cpp
 
-HEADER 	=	Weapon.hpp HumanA.hpp HumanB.hpp
+HEADER 	=
 
 OBJS	=	${SRCS:.cpp=.o}
 
