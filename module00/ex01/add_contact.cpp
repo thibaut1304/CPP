@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 18:06:07 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/14 15:27:21 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:04:37 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,14 +66,32 @@ static void print_contact(Phonebook contact[], int nb) {
     std::cout << std::endl;
 }
 
+bool    check_number_in_str(std::string str) {
+    size_t i(0);
+    while (i < str.length()) {
+        if (isdigit(str[i]))
+            i++;
+        else
+            return (false);
+    }
+    return (true);
+}
+
 void    search(Phonebook contact[], int nb) {
     int id(0);
+    char index[256];
 
     print_contact(contact, nb);
     std::cout << "Enter index contact for visualisation : ";
-    std::cin >> id;
+    std::cin >> index;
     std::cout << std::endl;
-    if (std::cin.good() && id < nb && id >= 0)
+    if (!check_number_in_str(index)) {
+        std::cout << "Index of contact is invalid" << std::endl;
+        return ;
+    }
+    id = atoi((char *)index);
+    std::cout << std::endl;
+    if (id < nb && id >= 0)
     {
         std::cout << "Contact NUMBER : " << id << std::endl;
         std::cout << "First Name     : " << contact[id].getFirst_name() << std::endl;
