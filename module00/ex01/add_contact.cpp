@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 18:06:07 by thhusser          #+#    #+#             */
-/*   Updated: 2022/01/02 16:38:57 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/14 15:27:21 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,10 @@ Phonebook add_contact() {
 }
 
 std::string check_size(std::string name) {
-    if (name.length() > WIDTH - 1)
+    if (name.length() > WIDTH) {
         name.erase(WIDTH - 1, name.length());
-    name.append(".");
+        name.append(".");
+    }
     return (name);
 }
 
