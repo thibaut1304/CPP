@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 17:43:12 by thhusser          #+#    #+#              #
-#    Updated: 2022/04/07 16:28:50 by thhusser         ###   ########.fr        #
+#    Updated: 2022/04/14 18:03:00 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,11 +28,11 @@ SRCS	=	main.cpp \
 
 OBJS	=	${SRCS:.cpp=.o}
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 RM		=	rm -f
 
-CC		=	clang++
+CC		=	c++
 
 .cpp.o:
 			@printf "$(_WHITE)Generating $(NAME) objects... %-33.33s\r$(_NC)" $@

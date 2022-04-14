@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:19:58 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/14 15:48:50 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/14 18:24:45 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,25 +22,19 @@
 # include <cctype>
 # include <cstdlib>
 
+
+
 class Phonebook
 {
     public:
 
     Phonebook();
     void    add(std::string FN, std::string LN, std::string NN, std::string PN, std::string DS);
-    std::string getFirst_name() const;
-    std::string getLast_name() const;
-    std::string getNickname() const;
-    std::string getPhone_number() const;
-    std::string getDarkest_secret() const;
-    
+
     private:
 
-    std::string first_name;
-    std::string last_name;
-    std::string nickname;
-    std::string phone_number;
-    std::string darkest_secret;
+    Contact contact[MAX_CONTACT];
+
 };
 
 Phonebook   add_contact(void);
