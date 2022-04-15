@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:18:07 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/15 16:44:38 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/15 17:01:17 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,12 @@ int main()
                 index = 0;
             if (str == "ADD" && index < MAX_CONTACT)
                 book.add_contact(index++);
-            // else if (str == "ADD" && index >= MAX_CONTACT)
-                // contact[index - 1] = add_contact();
             if (str == "SEARCH") {
                 book.search(); 
             }
         }
         else if (str == "EXIT")
             break ;
-        // std::cin.ignore(256, '\n');
     }
     return (0);
 }
