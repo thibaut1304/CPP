@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 17:43:12 by thhusser          #+#    #+#              #
-#    Updated: 2022/04/14 18:03:00 by thhusser         ###   ########.fr        #
+#    Updated: 2022/04/15 15:07:39 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,8 @@ _WHITE=\033[0;37m
 NAME	=	PhoneBook
 
 SRCS	=	main.cpp \
-			add_contact.cpp \
+			Contact.cpp \
 			Phonebook.cpp \
-
 
 OBJS	=	${SRCS:.cpp=.o}
 

@@ -6,12 +6,12 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:19:58 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/14 18:24:45 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/15 15:39:25 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef _PHONEBOOK_H_
+# define _PHONEBOOK_H_
 
 # define MAX_CONTACT 8
 # define WIDTH 10
@@ -22,22 +22,26 @@
 # include <cctype>
 # include <cstdlib>
 
-
+# include "Contact.hpp"
 
 class Phonebook
 {
     public:
 
     Phonebook();
-    void    add(std::string FN, std::string LN, std::string NN, std::string PN, std::string DS);
-
+    ~Phonebook();
+    void   add_contact(int index);
+    void    search(void);
+    void    print_contact(int index);
+    
     private:
 
-    Contact contact[MAX_CONTACT];
-
+    Contact _contact[MAX_CONTACT];
+    int     _nbContact;
+    int     _position;
 };
 
-Phonebook   add_contact(void);
-void        search(Phonebook contact[], int index);
+// Phonebook   add_contact(void);
+// void        search(Phonebook contact[], int index);
 
 #endif
