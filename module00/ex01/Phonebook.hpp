@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:19:58 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/15 16:38:59 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/15 16:51:14 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,5 @@ class Phonebook
     Contact _contact[MAX_CONTACT];
     int     _nbContact;
 };
-
-// Phonebook   add_contact(void);
-// void        search(Phonebook contact[], int index);
 
 #endif
