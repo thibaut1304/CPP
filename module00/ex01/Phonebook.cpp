@@ -6,13 +6,13 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:43:06 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/15 15:40:29 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/15 16:45:46 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
 
-Phonebook::Phonebook() : _nbContact(0), _position(0){
+Phonebook::Phonebook() : _nbContact(0){
     
 }
 
@@ -39,8 +39,8 @@ void Phonebook::add_contact(int index) {
     getline(std::cin, DS);
     
     this->_contact[index].add(FN, LN, NN, PN, DS);
-    this->_nbContact += 1;
-    this->_position += 1;
+    if (this->_nbContact < 8)
+        this->_nbContact += 1;
 }
 
 static std::string check_size(std::string name) {
@@ -89,6 +89,12 @@ void    Phonebook::search(void) {
     int id(0);
     char in[256];
 
+    if (this->_nbContact == 0)
+    {
+        std::cout << "No contact in Phone Book !" << std::endl;
+        std::cout << "$> ";
+        return ;
+    }
     print_contact(this->_nbContact);
     std::cout << "Enter index contact for visualisation : ";
     std::cin >> in;
@@ -98,7 +104,6 @@ void    Phonebook::search(void) {
         return ;
     }
     id = atoi((char *)in);
-    // std::cout << std::endl;
     if (id < this->_nbContact && id >= 0)
     {
         std::cout << "Contact NUMBER : " << id << std::endl;
