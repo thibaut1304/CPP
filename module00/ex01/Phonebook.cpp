@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/01 17:43:06 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/15 17:15:58 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:27:01 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,23 +39,23 @@ void Phonebook::add_contact(int index) {
     std::string DS;
 
     while(FN.empty()) {
-        std::cout << "First Name     : ";
+        std::cout << "First Name                 : ";
         getline(std::cin, FN);
     }
     while(LN.empty()) {
-        std::cout << "Last Name      : ";
+        std::cout << "Last Name                  : ";
         getline(std::cin, LN);
     }
     while(NN.empty()) {
-        std::cout << "Nickname       : ";
+        std::cout << "Nickname                   : ";
         getline(std::cin, NN);
     }
     while(PN.empty() || !check_number_in_str(PN)) {
-        std::cout << "Phone Number (number only): ";
+        std::cout << "Phone Number (number only) : ";
         getline(std::cin, PN);
     }
     while(DS.empty()) {
-        std::cout << "Darkest Secret : ";
+        std::cout << "Darkest Secret             : ";
         getline(std::cin, DS);
     }
     this->_contact[index].add(FN, LN, NN, PN, DS);
