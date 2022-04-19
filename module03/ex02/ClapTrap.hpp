@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 11:36:14 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/19 21:23:23 by thhusser         ###   ########.fr       */
+/*   Created: 2022/04/19 21:22:45 by thhusser          #+#    #+#             */
+/*   Updated: 2022/04/19 21:51:29 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef _CLAPTRAP_HPP_
 # define _CLAPTRAP_HPP_
@@ -19,7 +20,7 @@
 class ClapTrap {
 
 	public:
-		ClapTrap(std::string const name);
+		ClapTrap(std::string const name = "Default_ScavTrap");
 		ClapTrap(ClapTrap const & src);
 		ClapTrap &operator=(ClapTrap const & rhs);
 		~ClapTrap();
