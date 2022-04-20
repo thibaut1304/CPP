@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 17:14:00 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/20 17:26:41 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/20 17:31:38 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,4 @@ Animal		&Animal::operator=(Animal const & rhs) {
 
 Animal::~Animal(void) {
 	std::cout << "Destructor Animal called" << std::endl;
-}
-
-void		Animal::makesound(void) {
-	
 }

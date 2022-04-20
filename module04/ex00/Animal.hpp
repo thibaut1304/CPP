@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 17:13:44 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/20 17:25:15 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/20 17:31:43 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include <string>
 
-class Aniaml {
+class Animal {
 
 	public:
 
@@ -24,7 +24,7 @@ class Aniaml {
 		Animal(Animal const & src);
 		~Animal(void);
 		Animal			&operator=(Animal const & rhs);
-		void			makesound(void);
+		virtual void	makesound(void);
 
 	protected:
 
