@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/17 11:36:14 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/19 21:23:29 by thhusser         ###   ########.fr       */
+/*   Created: 2022/04/19 21:22:25 by thhusser          #+#    #+#             */
+/*   Updated: 2022/04/19 21:28:43 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap(ClapTrap const & src) {
 }
 
 ClapTrap &ClapTrap::operator=(ClapTrap const & rhs) {
-	std::cout << "Assignement ClapTrap copy called !" << std::endl;
+	std::cout << "Assigenement ClapTrap copy called !" << std::endl;
 	if (this != &rhs)
 	{
 		this->_attackDammage = rhs._attackDammage;
@@ -73,8 +73,6 @@ void	ClapTrap::attack(const std::string & target) {
 	}
 	else
 		std::cout << "ClapTrap " << this->_name << " does not have enough hits !" << std::endl;
-
-
 }
 
 void	ClapTrap::takeDamage(unsigned int amount) {
