@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/04/17 11:45:14 by thhusser         ###   ########.fr        #
+#    Updated: 2022/04/26 13:33:33 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,20 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37m
 
-NAME	= ClapTrap
+NAME	= Poly
 
-SRCS	=	ClapTrap.cpp \
+SRCS	=	Animal.cpp \
+			Cat.cpp \
+			Dog.cpp \
+			WrongAnimal.cpp \
+			WrongCat.cpp \
 			main.cpp \
 
-HEADER 	=	ClapTrap.hpp
+HEADER 	=	Animal.hpp \
+			Cat.hpp \
+			Dog.hpp \
+			WrongAnimal.hpp \
+			WrongCat.hpp \
 
 OBJS	=	${SRCS:.cpp=.o}
 
@@ -34,9 +42,9 @@ RM		=	rm -f
 
 CC		=	c++
 
-.c.o:
+.cpp.o:
 			@printf "$(_WHITE)Generating $(NAME) objects... %-33.33s\r$(_NC)" $@
-			@$(CC) ${CFLAGS} $(HEADER) -c $< -o $(<:.cpp=.o)
+			@$(CC) ${CFLAGS} -c $< -o $(<:.cpp=.o)
 
 ${NAME}:	${OBJS}
 			@echo ""

@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 17:13:44 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/20 17:31:43 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:00:41 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ class Animal {
 
 		Animal(void);
 		Animal(Animal const & src);
-		~Animal(void);
+		virtual ~Animal(void);
 		Animal			&operator=(Animal const & rhs);
-		virtual void	makesound(void);
+		std::string		getType(void) const;
+		virtual void	makeSound(void) const;
 
 	protected:
 
