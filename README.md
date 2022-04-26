@@ -23,5 +23,20 @@
 ## Module 02
 - [x] ex00
 - [x] ex01
+- [x] ex02
+- [ ] ex03
+
+## Module 03
+- [x] ex00
+- [x] ex01
+- [x] ex02
+- [ ] ex03
+
+## Module 04
+- [x] ex00
+- [ ] ex01
 - [ ] ex02
 - [ ] ex03
+
+### Notes
+	*	Regarder sur les Makefile la règles .cpp.o sinon mettre .c.o en remetant le header ! (Comportement très bizarre !)
