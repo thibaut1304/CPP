@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/26 12:32:14 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/27 15:09:14 by thhusser         ###   ########.fr       */
+/*   Created: 2022/04/26 13:12:30 by thhusser          #+#    #+#             */
+/*   Updated: 2022/04/26 13:15:04 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _DOG_HPP_
-# define _DOG_HPP_
+#ifndef _WRONGCAT_HPP_
+# define _WRONGCAT_HPP_
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include "WrongAnimal.hpp"
 
-class Dog : public Animal {
+class WrongCat : public WrongAnimal {
 	public:
-		Dog(void);
-		Dog(Dog const & src);
-		Dog				&operator=(Dog const & rhs);
-		~Dog(void);
-		void			show_ideas( void ) const;
-		void			makeSound(void) const;
-		void			add_ideas(std::string const);
-	private:
-		Brain			*_brain;
+		WrongCat(void);
+		WrongCat(WrongCat const & src);
+		WrongCat	&operator=(WrongCat const & rhs);
+		~WrongCat(void);
+		void	makeSound(void) const;
 };
 
 #endif

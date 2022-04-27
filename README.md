@@ -34,8 +34,8 @@
 
 ## Module 04
 - [x] ex00
-- [ ] ex01
-- [ ] ex02
+- [X] ex01
+- [X] ex02
 - [ ] ex03
 
 ### Notes

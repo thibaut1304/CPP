@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/26 13:47:50 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/27 15:06:37 by thhusser         ###   ########.fr       */
+/*   Created: 2022/04/20 17:13:44 by thhusser          #+#    #+#             */
+/*   Updated: 2022/04/27 17:10:37 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _BRAIN_HPP_
-# define _BRAIN_HPP_
+#ifndef _AANIMAL_HPP_
+# define _AANIMAL_HPP_
 
 # include <iostream>
 # include <string>
 
-# define TOTAL_IDEAS 100
+class AAnimal {
 
-class Brain {
 	public:
-		Brain();
-		Brain(Brain const & src);
-		Brain		&operator=(Brain const & rhs);
-		void		add(int index, std::string name);
-		void		show(unsigned const index) const;
-		~Brain();				// a voir si passer en virtual !
-	private:
-		std::string _ideas[TOTAL_IDEAS];
+
+		AAnimal(void);
+		AAnimal(AAnimal const & src);
+		virtual ~AAnimal(void);
+		AAnimal			&operator=(AAnimal const & rhs);
+		std::string		getType(void) const;
+		virtual void	makeSound(void) const = 0;
+		virtual void	add_ideas(std::string const) = 0;
+		virtual	void	show_ideas( void ) const = 0;
+
+	protected:
+
+		unsigned int	_nbIdeas;
+		std::string		_type;
+
 };
+
 #endif

@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/04/27 15:12:48 by thhusser         ###   ########.fr        #
+#    Updated: 2022/04/27 17:06:44 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ _WHITE=\033[0;37m
 
 NAME	= 	Brain
 
-SRCS	=	Animal.cpp \
+SRCS	=	AAnimal.cpp \
 			Cat.cpp \
 			Dog.cpp \
 			Brain.cpp \
@@ -29,7 +29,7 @@ SRCS	=	Animal.cpp \
 			WrongCat.cpp \
 			main.cpp \
 
-HEADER 	=	Animal.hpp \
+HEADER 	=	AAnimal.hpp \
 			Cat.hpp \
 			Dog.hpp \
 			Brain.hpp \

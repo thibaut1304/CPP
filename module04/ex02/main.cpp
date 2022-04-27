@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 12:40:54 by thhusser          #+#    #+#             */
-/*   Updated: 2022/04/27 15:37:24 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/04/27 17:11:42 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 static void test(void)
 {
 	std::cout << "  **  Construct  **" << std::endl;
-	Animal* 	tosca = new Dog();
-	Animal*		felix = new Cat();
+	AAnimal* 	tosca = new Dog();
+	AAnimal*		felix = new Cat();
 	std::cout << "---------------------------------------------------" << std::endl;
 	std::cout << "Felix is a " << felix->getType() << " -> ";
 	felix->makeSound();
@@ -69,15 +69,15 @@ static void test(void)
 
 int		main(void) {
 
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	//const AAnimal* meta = new AAnimal();
+	const AAnimal* j = new Dog();
+	const AAnimal* i = new Cat();
 
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
 	i->makeSound();
 	j->makeSound();
-	meta->makeSound();
+	// meta->makeSound();
 
 	std::cout << "\n --------------------------------------------- \n\n";
 
@@ -91,13 +91,13 @@ int		main(void) {
 
 	delete wrongA;
 	delete wrongC;
-	delete meta;
+	// delete meta;
 	delete i;
 	delete j;
 
 	std::cout << "\n --------------------------------------------- \n\n";
 
-	const Animal	*farm[ANIMALS];
+	const AAnimal	*farm[ANIMALS];
 
 	for(int i = 0; i < ANIMALS; i++) {
 		if (i < (ANIMALS / 2)) {
