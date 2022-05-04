@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/04/26 13:38:56 by thhusser         ###   ########.fr        #
+#    Updated: 2022/05/03 16:45:17 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,20 +19,12 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37m
 
-NAME	= 	Poly
+NAME	= 	Bureaurat
 
-SRCS	=	Animal.cpp \
-			Cat.cpp \
-			Dog.cpp \
-			WrongAnimal.cpp \
-			WrongCat.cpp \
+SRCS	=	Bureaucrat.cpp \
 			main.cpp \
 
-HEADER 	=	Animal.hpp \
-			Cat.hpp \
-			Dog.hpp \
-			WrongAnimal.hpp \
-			WrongCat.hpp \
+HEADER 	=	Bureaucrat.hpp \
 
 OBJS	=	${SRCS:.cpp=.o}
 
