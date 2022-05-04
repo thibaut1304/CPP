@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:10:24 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/03 16:55:57 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/04 12:31:11 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ const char		*Bureaucrat::GradeTooLowException::what() const throw() {
 
 std::ostream	&operator<<(std::ostream & o, Bureaucrat const & rhs) {
 	o << rhs.getName();
-	o << ", bureaucrate grade : ";
+	o << ", bureaucrat grade : ";
 	o << rhs.getGrade();
 	o << ".\n";
 	return (o);
