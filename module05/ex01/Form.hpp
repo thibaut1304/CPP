@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 12:42:24 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/04 13:08:51 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/04 14:39:07 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@ class Form {
 		Form();		
 		Form(Form const & src);
 		Form	&operator=(Form const & rhs);
-				
+		class	GradeTooHighException : public std::exception {
+			const char *what() const throw;
+		};
+		class			GradeTooLowException : public std::exception {
+			const char 	*what() const throw();
+		};	
 		~Form();
 	private:
 		std::string const 	name;
@@ -27,5 +32,7 @@ class Form {
 		int	const			grade_execute;		
 			
 };
+
+std::ostream	&operator<<(std::ostream & o, Bureaucrat const & rhs);
 
 #endif
