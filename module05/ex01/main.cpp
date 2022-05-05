@@ -6,11 +6,12 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:42:44 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/04 12:34:48 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/05 11:59:17 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int		main()
 {
@@ -73,5 +74,15 @@ int		main()
 		std::cout << nb_2;
 		std::cout << " ------------------------------------- \n";
 	}
+
+	std::cout << " ------------------------------------- \n";
+	std::cout << " ------------------------------------- \n";
+	std::cout << " ------------------------------------- \n";
+
+	Form		test("Form_1", 10, 2);
+	Bureaucrat 	nb_1("Thibaut", 1);
+
+	nb_1.signForm(test);
+	std::cout << test;
 	return (0);
 }
