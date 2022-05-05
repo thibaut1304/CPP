@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:00:01 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/05 11:55:59 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/05 14:58:00 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,13 @@ Form			&Form::operator=(Form const & rhs) {
 	return (*this);
 }
 void			Form::beSigned(Bureaucrat const & src) {
-	if (this->_signed == true)
-		std::cout << src.getName() << "signed" << this->_name << std::endl;
+	if (src.getGrade() > this->_gradeSigned) {
+		throw Form::GradeTooLowException();
+	}
+	else {
+		this->_signed = true;
+		// std::cout << src.getName() << " signed " << this->_name << " !" << std::endl;
+	}
 }
 
 const char		*Form::GradeTooHighException::what() const throw() {
@@ -73,9 +78,9 @@ std::ostream	&operator<<(std::ostream & o, Form const & rhs) {
 	std::string str;
 	
 	if (rhs.getSigned() == 1)
-		str.append("True");
+		str.append("yes");
 	else
-		str.append("False");
+		str.append("no");
 	o << "Form name : " << rhs.getName() << " ";
 	o << "is signed : " << str << std::endl;
 	o << "Level for signe form : " << rhs.getGradeSigned() << " and level for execute " << rhs.getGradeExecute() << std::endl;

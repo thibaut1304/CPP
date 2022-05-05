@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:02:30 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/05 11:58:48 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/05 14:19:29 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ class Bureaucrat {
 	private:
 		std::string	const	_name;
 		int					_grade;
-		bool				_signed;
 };
 
 std::ostream	&operator<<(std::ostream & o, Bureaucrat const & rhs);
