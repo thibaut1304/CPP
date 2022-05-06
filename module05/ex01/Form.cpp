@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:00:01 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/05 14:58:00 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/06 11:22:31 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void			Form::beSigned(Bureaucrat const & src) {
 	}
 	else {
 		this->_signed = true;
-		// std::cout << src.getName() << " signed " << this->_name << " !" << std::endl;
 	}
 }
 

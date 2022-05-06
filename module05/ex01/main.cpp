@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:42:44 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/05 15:06:39 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/06 11:11:46 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@
 
 int		main(int argc, char **argv)
 {
-	if (argc != 2) {
+	if (argc != 2 || !isdigit(argv[1][0])) {
 		std::cout << "Usage './Form {number test}'\nNumber 1 to 3\nNumber 0 for all tests\n";
 		return (1);
 	}
-	if (!isdigit(argv[1][0])) {
-		std::cout << "Usage './Form {number test}'\nNumber 0 to 3\n";
+	int nb = atoi(argv[1]);
+	if (nb < 0 || nb > 3) {
+		std::cout << "Usage './Form {number test}'\nNumber 0 to 3\nNumber 0 for all tests\n";
 		return (1);
 	}
 	
-	int nb = atoi(argv[1]);
 	if (nb == 1 || nb == 0) {
 		std::cout << "----------------------------------------\n";
 		std::cout << "-------Invalid grade FORM to high-------\n";
@@ -65,8 +65,8 @@ int		main(int argc, char **argv)
 		}
 	}
 	if (nb == 3 || nb == 0) {
-			Form	test("Form_1", 10, 2);
-			Bureaucrat nb_1("Thibaut", 11);
+		Form	test("Form_1", 10, 2);
+		Bureaucrat nb_1("Thibaut", 11);
 		try {
 			std::cout << "----------------------------------------\n";
 			std::cout << "-Can't Sign Form 'Form_1' with 'Thibaut'\n";
@@ -80,7 +80,5 @@ int		main(int argc, char **argv)
 			nb_1.signForm(test);
 	}
 
-	// std::cout << nb_1;
-	
 	return (0);
 }
