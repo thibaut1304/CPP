@@ -6,79 +6,117 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:42:44 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/06 11:11:46 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/08 23:39:31 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
-
-#include <stdlib.h>
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 #include <ctype.h>
-#define EX00 0 
+
+#define EX00 0
 
 int		main(int argc, char **argv)
 {
-	if (argc != 2 || !isdigit(argv[1][0])) {
-		std::cout << "Usage './Form {number test}'\nNumber 1 to 3\nNumber 0 for all tests\n";
-		return (1);
-	}
-	int nb = atoi(argv[1]);
-	if (nb < 0 || nb > 3) {
-		std::cout << "Usage './Form {number test}'\nNumber 0 to 3\nNumber 0 for all tests\n";
-		return (1);
-	}
-	
-	if (nb == 1 || nb == 0) {
-		std::cout << "----------------------------------------\n";
-		std::cout << "-------Invalid grade FORM to high-------\n";
-		std::cout << "----------------------------------------\n";
-		try {
-			Form		test("Form_1", 151, 2);
-		}
-		catch (std::exception & e) {
-			std::cout << e.what();
-		}
-		std::cout << "----------------------------------------\n";
-		std::cout << "-------Invalid grade FORM to low--------\n";
-		std::cout << "----------------------------------------\n";
-		try {
-			Form		test("Form_1", 0, 2);
-		}
-		catch (std::exception & e) {
-			std::cout << e.what();
-		}
-	}
-	if (nb == 2 || nb == 0) {
-		try {
-			std::cout << "----------------------------------------\n";
-			std::cout << "----Sign Form 'Form_1' with 'Thibaut'---\n";
-			std::cout << "----------------------------------------\n";
-			Form	test("Form_1", 10, 2);
-			Bureaucrat nb_1("Thibaut", 1);
+	(void)argc;
+	(void)argv;
+	// srand(time(NULL));
 
-			test.beSigned(nb_1);
-			nb_1.signForm(test);
-		}
-		catch (std::exception & e) {
-			std::cout << e.what();
-		}
-	}
-	if (nb == 3 || nb == 0) {
-		Form	test("Form_1", 10, 2);
-		Bureaucrat nb_1("Thibaut", 11);
-		try {
-			std::cout << "----------------------------------------\n";
-			std::cout << "-Can't Sign Form 'Form_1' with 'Thibaut'\n";
-			std::cout << "----------------------------------------\n";
+	Bureaucrat supervisor("Supervisor", 30);
+	// std::cout << supervisor;
+	Bureaucrat francis("Francis", 150);
+	// std::cout << francis;
 
-			test.beSigned(nb_1);
-		}
-		catch (std::exception & e) {
-			std::cout << e.what();
-		}
-			nb_1.signForm(test);
+	// PresidentialPardonForm pres = PresidentialPardonForm("Francis");
+	// std::cout << pres;
+	// try {
+	// 	supervisor.signForm(pres);
+	// } catch(std::exception const &e) {
+	// 	std::cerr << e.what() << std::endl;
+	// }
+	// try {
+	// 	pres.execute(supervisor);
+	// } catch(std::exception const &e){
+	// 	std::cerr << e.what() << std::endl;
+	// }
+	// std::cout << supervisor;
+	// try {
+	// 	supervisor.signForm(pres);
+	// } catch(std::exception const &e) {
+	// 	std::cerr << e.what() << std::endl;
+	// }
+	// try {
+	// 	pres.execute(supervisor);
+	// } catch(std::exception const &e){
+	// 	std::cerr << e.what() << std::endl;
+	// }
+
+	std::cout << std::endl << "-----------------" << std::endl;
+	std::cout << std::endl;
+	RobotomyRequestForm robot = RobotomyRequestForm("Francis");
+	try {
+		francis.signForm(robot);
+	} catch(std::exception const &e) {
+		std::cerr << e.what() << std::endl;
+	}
+	try {
+		robot.execute(francis);
+	} catch(std::exception const &e){
+		std::cerr << e.what() << std::endl;
+	}
+	try {
+		supervisor.signForm(robot);
+	} catch(std::exception const &e) {
+		std::cerr << e.what() << std::endl;
+	}
+	try {
+		robot.execute(supervisor);
+	} catch(std::exception const &e){
+		std::cerr << e.what() << std::endl;
 	}
 
+	// std::cout << std::endl << "-----------------" << std::endl;
+	// std::cout << std::endl;
+	// ShrubberyCreationForm shrubbery = ShrubberyCreationForm("Maison");
+	// try {
+	// 	supervisor.signForm(shrubbery);
+	// } catch(std::exception const &e) {
+	// 	std::cerr << e.what() << std::endl;
+	// }
+	// try {
+	// 	shrubbery.execute(supervisor);
+	// } catch(std::exception const &e){
+	// 	std::cerr << e.what() << std::endl;
+	// }
+
+	// std::cout << std::endl << "-----------------" << std::endl;
+	// std::cout << std::endl;
+	// try
+	// {
+	// 	PresidentialPardonForm pres = PresidentialPardonForm("Francis");
+	// 	std::cout << pres;
+	// 	std::cout << francis;
+	// 	std::cout << supervisor;
+	// 	supervisor.signForm(pres);
+	// 	francis.executeForm(pres);
+	// }
+	// catch(std::exception const &e)
+	// {
+	// 	std::cerr << e.what() << std::endl;
+	// }
+	// std::cout << std::endl;
+	// try
+	// {
+	// 	PresidentialPardonForm pres = PresidentialPardonForm("Francis");
+	// 	std::cout << pres;
+	// 	supervisor.signForm(pres);
+	// 	supervisor.executeForm(pres);
+	// }
+	// catch(std::exception const &e)
+	// {
+	// 	std::cerr << e.what() << std::endl;
+	// }
 	return (0);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:00:01 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/06 12:16:17 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/08 23:27:13 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,21 @@ AForm			&AForm::operator=(AForm const & rhs) {
 	}
 	return (*this);
 }
+
+void			AForm::execute(Bureaucrat const & executor) const {
+	if (!_signed) {
+		throw NotSignedException();
+	}
+	else if (executor.getGrade() > _gradeExecute) {
+		throw AForm::GradeTooHighException();
+	}
+}
+
 void			AForm::beSigned(Bureaucrat const & src) {
+	// if (_signed) {
+	// 	std::cout << "Already signed." << std::endl;
+	// 	return ;
+	// }
 	if (src.getGrade() > this->_gradeSigned) {
 		throw AForm::GradeTooLowException();
 	}
@@ -51,6 +65,10 @@ const char		*AForm::GradeTooHighException::what() const throw() {
 
 const char		*AForm::GradeTooLowException::what() const throw() {
 	return ("Grade too low !\n");
+}
+
+const char		*AForm::NotSignedException::what() const throw(){
+  return ("FormException: not signed.");
 }
 
 std::string		AForm::getName(void) const {
@@ -70,12 +88,12 @@ int				AForm::getGradeExecute(void) const {
 }
 
 AForm::~AForm() {
-	
+
 }
 
 std::ostream	&operator<<(std::ostream & o, AForm const & rhs) {
 	std::string str;
-	
+
 	if (rhs.getSigned() == 1)
 		str.append("yes");
 	else

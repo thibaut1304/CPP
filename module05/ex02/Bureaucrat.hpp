@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:02:30 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/06 12:15:07 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/08 23:06:07 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Bureaucrat {
 		Bureaucrat	&operator=(Bureaucrat const & rhs);
 		~Bureaucrat();
 		void			signForm(AForm const & src);
+		void			executeForm(AForm const & form);
 		std::string		getName(void) const;
 		int				getGrade(void) const;
 		void			gradeIncrement(void);

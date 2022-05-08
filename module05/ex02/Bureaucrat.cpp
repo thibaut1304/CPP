@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:10:24 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/06 12:16:26 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/08 23:05:47 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,17 @@ std::ostream	&operator<<(std::ostream & o, Bureaucrat const & rhs) {
 	o << rhs.getGrade();
 	o << ".\n";
 	return (o);
+}
+
+void			Bureaucrat::executeForm(AForm const & form) {
+	if(!form.getSigned()) {
+		std::cout << "Form is not signed : " << form.getName() << " !\n";
+	}
+	else if (form.getGradeExecute() < this->_grade)
+		std::cout << this->_name << " grade too low for executs " << form.getName() << " !\n";
+	else
+		std::cout << this->_name << " execute " << form.getName() << " !\n";
+	form.execute(*this);
 }
 
 void			Bureaucrat::signForm(AForm const & src) {

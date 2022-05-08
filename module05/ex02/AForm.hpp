@@ -17,11 +17,12 @@
 
 class AForm {
 	public:
-		AForm(std::string const name, int signe, int execute);		
+		AForm(std::string const name, int signe, int execute);
 		AForm(AForm const & src);
-		AForm	&operator=(AForm const & rhs);
+		AForm			&operator=(AForm const & rhs);
 
-		virtual void	beSigned(Bureaucrat const & src) = 0;
+		void			beSigned(Bureaucrat const & src);
+		virtual void 	execute(Bureaucrat const & executor) const = 0;
 
 		std::string		getName(void) const;
 		bool			getSigned(void) const;
@@ -32,16 +33,19 @@ class AForm {
 		};
 		class			GradeTooLowException : public std::exception {
 						const char 	*what() const throw();
-		};	
-		~AForm();
+		};
+		class 			NotSignedException: public std::exception{
+    					const char* what() const throw();
+  		};
+		virtual ~AForm();
 	private:
 		std::string const 	_name;
 		bool				_signed;
-		int	const			_gradeSigned;		
-		int	const			_gradeExecute;		
-			
+		int	const			_gradeSigned;
+		int	const			_gradeExecute;
+
 };
 
-std::ostream	&operator<<(std::ostream & o, Form const & rhs);
+std::ostream	&operator<<(std::ostream & o, AForm const & rhs);
 
 #endif

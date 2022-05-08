@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/05/05 14:02:37 by thhusser         ###   ########.fr        #
+#    Updated: 2022/05/08 22:44:57 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,14 +19,20 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37m
 
-NAME	= 	Form
+NAME	= 	AForm
 
 SRCS	=	Bureaucrat.cpp \
-			Form.cpp \
+			AForm.cpp \
+			PresidentialPardonForm.cpp \
+			RobotomyRequestForm.cpp \
+			ShrubberyCreationForm.cpp \
 			main.cpp \
 
 HEADER 	=	Bureaucrat.hpp \
-			Form.hpp \
+			AForm.hpp \
+			ShrubberyCreationForm.hpp \
+			RobotomyRequestForm.hpp \
+			PresidentialPardonForm.hpp \
 
 OBJS	=	${SRCS:.cpp=.o}
 
