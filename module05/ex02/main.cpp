@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:42:44 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/09 12:49:23 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/09 13:08:10 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include <ctype.h>
-
-#define EX00 0
 
 void	Robot(Bureaucrat supervisor, Bureaucrat francis) {
 	std::cout << supervisor;
@@ -30,7 +28,7 @@ void	Robot(Bureaucrat supervisor, Bureaucrat francis) {
 		std::cerr << e.what() << std::endl;
 	}
 	try {
-		robot.execute(francis);
+		francis.executeForm(robot);
 	} catch(std::exception const &e){
 		std::cerr << e.what() << std::endl;
 	}
@@ -41,7 +39,7 @@ void	Robot(Bureaucrat supervisor, Bureaucrat francis) {
 		std::cerr << e.what() << std::endl;
 	}
 	try {
-		robot.execute(supervisor);
+		supervisor.executeForm(robot);
 	} catch(std::exception const &e){
 		std::cerr << e.what() << std::endl;
 	}
@@ -57,8 +55,8 @@ void	Presidential(Bureaucrat supervisor) {
 		std::cerr << e.what() << std::endl;
 	}
 	try {
-		pres.execute(supervisor);
-	} catch(std::exception const &e){
+		supervisor.executeForm(pres);
+	} catch(std::exception const &e) {
 		std::cerr << e.what() << std::endl;
 	}
 	while(supervisor.getGrade() > 1)
@@ -70,7 +68,7 @@ void	Presidential(Bureaucrat supervisor) {
 		std::cerr << e.what() << std::endl;
 	}
 	try {
-		pres.execute(supervisor);
+		supervisor.executeForm(pres);
 	} catch(std::exception const &e){
 		std::cerr << e.what() << std::endl;
 	}
@@ -88,7 +86,7 @@ void	Shrubbery(Bureaucrat supervisor, Bureaucrat francis) {
 		std::cerr << e.what() << std::endl;
 	}
 	try {
-		shrubbery.execute(supervisor);
+		supervisor.executeForm(shrubbery);
 	} catch(std::exception const &e){
 		std::cerr << e.what() << std::endl;
 	}
@@ -100,7 +98,7 @@ void	Shrubbery(Bureaucrat supervisor, Bureaucrat francis) {
 		std::cerr << e.what() << std::endl;
 	}
 	try {
-		shrubbery_2.execute(francis);
+		francis.executeForm(shrubbery_2);
 	} catch(std::exception const &e){
 		std::cerr << e.what() << std::endl;
 	}
