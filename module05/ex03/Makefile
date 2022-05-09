@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/04/26 13:38:56 by thhusser         ###   ########.fr        #
+#    Updated: 2022/05/09 13:10:11 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,20 +19,22 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37m
 
-NAME	= 	Poly
+NAME	= 	Form
 
-SRCS	=	Animal.cpp \
-			Cat.cpp \
-			Dog.cpp \
-			WrongAnimal.cpp \
-			WrongCat.cpp \
+SRCS	=	Bureaucrat.cpp \
+			Form.cpp \
+			PresidentialPardonForm.cpp \
+			RobotomyRequestForm.cpp \
+			ShrubberyCreationForm.cpp \
+			Intern.cpp \
 			main.cpp \
 
-HEADER 	=	Animal.hpp \
-			Cat.hpp \
-			Dog.hpp \
-			WrongAnimal.hpp \
-			WrongCat.hpp \
+HEADER 	=	Bureaucrat.hpp \
+			Form.hpp \
+			ShrubberyCreationForm.hpp \
+			RobotomyRequestForm.hpp \
+			PresidentialPardonForm.hpp \
+			Intern.hpp \
 
 OBJS	=	${SRCS:.cpp=.o}
 
@@ -63,6 +65,7 @@ fclean:		clean
 ifneq ($(wildcard $(NAME)),)
 		@${RM} ${NAME};
 		@echo "$(_GREEN)Delete $(NAME)$(_NC)"
+		@${RM} *_shrubbery
 endif
 
 re:			fclean all
