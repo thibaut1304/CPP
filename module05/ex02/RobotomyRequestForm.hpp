@@ -6,17 +6,17 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 22:22:10 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/08 23:13:58 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/09 12:46:23 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _ROBOTOMY_REQUEST_FORM_HPP_
 # define _ROBOTOMY_REQUEST_FORM_HPP_
 
-#include "AForm.hpp"
+#include "Form.hpp"
 #include <stdlib.h>
 
-class RobotomyRequestForm : public AForm {
+class RobotomyRequestForm : public Form {
 	public:
 		RobotomyRequestForm(std::string const target);
 		RobotomyRequestForm(RobotomyRequestForm const &);

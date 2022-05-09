@@ -15,11 +15,11 @@
 
 # include "Bureaucrat.hpp"
 
-class AForm {
+class Form {
 	public:
-		AForm(std::string const name, int signe, int execute);
-		AForm(AForm const & src);
-		AForm			&operator=(AForm const & rhs);
+		Form(std::string const name, int signe, int execute);
+		Form(Form const & src);
+		Form			&operator=(Form const & rhs);
 
 		void			beSigned(Bureaucrat const & src);
 		virtual void 	execute(Bureaucrat const & executor) const = 0;
@@ -37,7 +37,7 @@ class AForm {
 		class 			NotSignedException: public std::exception{
     					const char* what() const throw();
   		};
-		virtual ~AForm();
+		virtual ~Form();
 	private:
 		std::string const 	_name;
 		bool				_signed;
@@ -46,6 +46,6 @@ class AForm {
 
 };
 
-std::ostream	&operator<<(std::ostream & o, AForm const & rhs);
+std::ostream	&operator<<(std::ostream & o, Form const & rhs);
 
 #endif

@@ -6,17 +6,17 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 22:26:22 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/08 23:10:19 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/09 12:44:59 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(std::string const target) : AForm("Presidential Pardon", 25, 5),  _target(target) {
+PresidentialPardonForm::PresidentialPardonForm(std::string const target) : Form("Presidential Pardon", 25, 5),  _target(target) {
 
 }
 
-PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & src) : AForm(src), _target(src._target) {
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & src) : Form(src), _target(src._target) {
 
 }
 
@@ -32,6 +32,6 @@ PresidentialPardonForm::~PresidentialPardonForm() {
 }
 
 void					PresidentialPardonForm::execute(Bureaucrat const &executor) const {
-	AForm::execute(executor);
+	Form::execute(executor);
 	std::cout << "Informs that the " << this->_target << " has been forgiven by Zaphod Beeblebrox\n";
 }

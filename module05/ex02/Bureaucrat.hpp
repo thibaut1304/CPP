@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:02:30 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/08 23:06:07 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/09 12:45:51 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 // # include "Form.hpp"
 // # include <execption> --> a check! --> que pour les exception "bad arguments ..."
-class AForm;
+class Form;
 
 class Bureaucrat {
 	public:
@@ -26,8 +26,8 @@ class Bureaucrat {
 		Bureaucrat(Bureaucrat const & src);
 		Bureaucrat	&operator=(Bureaucrat const & rhs);
 		~Bureaucrat();
-		void			signForm(AForm const & src);
-		void			executeForm(AForm const & form);
+		void			signForm(Form & src);
+		void			executeForm(Form const & form);
 		std::string		getName(void) const;
 		int				getGrade(void) const;
 		void			gradeIncrement(void);
