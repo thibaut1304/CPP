@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/05/14 20:40:18 by thhusser         ###   ########.fr        #
+#    Updated: 2022/05/15 13:58:13 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,11 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37m
 
-NAME	= 	Data
+NAME	= 	iter
 
 SRCS	=	main.cpp \
 
-HEADER 	=	Base.hpp \
+HEADER 	=	iter.hpp \
 
 OBJS	=	${SRCS:.cpp=.o}
 
