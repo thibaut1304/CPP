@@ -69,5 +69,6 @@
 		"variant": "cpp",
 		"vector": "cpp",
 		"__bits": "cpp"
-	}
+	},
+	"C_Cpp.errorSquiggles": "Disabled"
 }
