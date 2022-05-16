@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 16:56:30 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/16 18:20:33 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:49:57 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Span {
 			const char *what() const throw();
 		};
 		void	addNumber(int);
+		std::vector<unsigned int>		getVector(void) const;
 
 	private:
 		Span();

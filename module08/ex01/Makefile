@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/05/16 18:32:25 by thhusser         ###   ########.fr        #
+#    Updated: 2022/05/16 18:47:17 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37m
 
-NAME	= 	Array
+NAME	= 	Span
 
 SRCS	=	Span.cpp \
 			main.cpp \

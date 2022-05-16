@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 18:11:59 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/16 18:38:54 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/16 18:55:18 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,30 @@
 Span::Span(unsigned int N) : _size(N) {}
 
 Span::Span(Span const & src) {
-	std::vector<unsigned int>::iterator it;
-	unsigned int i = 0;
-	for (it = src._N.begin(); it != src._N.end(); it++) {
-		i++;
-		if (i >= _size)
-			throw newElementadded();
-		this->_N.push_back(*it);
-	}
+	(void)src;
+	// std::vector<unsigned int>::iterator it;
+	// unsigned int i = 0;
+	// _size = src._size;
+	// for (it = src._N.begin(); it != src._N.end(); it++) {
+	// 	i++;
+	// 	if (i >= _size)
+	// 		throw newElementadded();
+	// 	this->_N.push_back(*it);
+	// }
 }
 
 Span	&Span::operator=(Span const & rhs) {
-	std::vector<unsigned int>::iterator it;
-	unsigned int i = 0;
-	for (it = rhs._N.begin(); it != rhs._N.end(); it++) {
-		i++;
-		if (i >= _size)
-			throw newElementadded();
-		this->_N.push_back(*it);
-	}
+	(void)rhs;
+	// std::vector<unsigned int>::iterator it;
+	// unsigned int i = 0;
+	// _size = rhs._size;
+	// for (it = rhs._N.begin(); it != rhs._N.end(); it++) {
+	// 	i++;
+	// 	if (i >= _size)
+	// 		throw newElementadded();
+	// 	this->_N.push_back(*it);
+	// }
+	return (*this);
 }
 
 Span::~Span() {}
@@ -42,6 +47,9 @@ const char *Span::newElementadded::what() const throw() {
 	return ("Error add number");
 }
 
+std::vector<unsigned int>		Span::getVector(void) const {
+	return(this->_N);
+}
 void	Span::addNumber(int nb) {
 	unsigned int i = 0;
 	 std::vector<unsigned int>::iterator it;
