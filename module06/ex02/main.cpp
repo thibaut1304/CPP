@@ -6,11 +6,11 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 20:40:35 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/14 20:56:14 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/16 11:29:00 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Class.hpp"
+#include "Base.hpp"
 
 Base * generate(void) {
 	int i = rand() % 3;

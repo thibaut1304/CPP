@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 18:54:38 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/14 19:19:23 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/16 11:50:19 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <math.h>
 # include <string>
 # include <iostream>
+# include <cstdlib>
+# include <climits>
 
 class Convert {
 	public:

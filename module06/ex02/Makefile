@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/05/14 20:40:18 by thhusser         ###   ########.fr        #
+#    Updated: 2022/05/16 11:27:34 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,9 @@ NAME	= 	Data
 SRCS	=	main.cpp \
 
 HEADER 	=	Base.hpp \
+			A.hpp \
+			B.hpp \
+			C.hpp \
 
 OBJS	=	${SRCS:.cpp=.o}
 
