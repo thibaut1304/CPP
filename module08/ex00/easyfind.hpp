@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 23:45:26 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/16 00:22:41 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/16 16:44:19 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ template<typename T>
 int		easyfind(T const & p1, int const p2) {
 	typename T::const_iterator it;
 	typename T::const_iterator ite = p1.end();
+	
 	for(it = p1.begin(); it != ite; ++it) {
 		if (*it == p2)
 			return (*it);
