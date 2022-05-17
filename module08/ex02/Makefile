@@ -6,7 +6,7 @@
 #    By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/01 16:16:33 by thhusser          #+#    #+#              #
-#    Updated: 2022/05/15 16:17:45 by thhusser         ###   ########.fr        #
+#    Updated: 2022/05/17 12:25:06 by thhusser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,11 @@ _PURPLE=\033[0;95m
 _CYAN=\033[0;36m
 _WHITE=\033[0;37m
 
-NAME	= 	Array
+NAME	= 	Stack
 
 SRCS	=	main.cpp \
 
-HEADER 	=	Array.hpp \
+HEADER 	=	MutantStack.hpp \
 
 OBJS	=	${SRCS:.cpp=.o}
 
