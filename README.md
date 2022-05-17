@@ -54,10 +54,10 @@
 - [x] ex01
 - [x] ex02
 
-## Module 07
+## Module 08
 - [x] ex00
 - [x] ex01
-- [ ] ex02
+- [x] ex02
 
 ### Notes
 	*	Regarder sur les Makefile la règles .cpp.o sinon mettre .c.o en remetant le header ! (Comportement très bizarre !)
