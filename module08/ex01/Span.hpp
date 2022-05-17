@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 16:56:30 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/17 00:41:24 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/17 10:27:46 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <vector>
+# include <algorithm>
 
 #define _NC "\033[0;0m"
 #define _RED "\033[0;31m"

@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 18:11:59 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/17 00:52:33 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/17 10:33:55 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,6 @@ int		Span::shortestSpan() {
 		if ((copie [i + 1] - copie[i]) < ret)
 			ret = copie [i + 1] - copie[i];
 	}
-	// for (it = copie.begin(); it != copie.end(); it++) {
-	// 	if (it == copie.begin())
-	// 		std::cout << _RED << *it << _NC;
-	// 	else
-	// 		std::cout << ", " << _RED << *it << _NC;
-	// }
-	// std::cout << std::endl;
 	return (ret);
 }
 
