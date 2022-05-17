@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 18:30:06 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/17 10:41:55 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/17 18:06:14 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void	main_subject() {
 	sp.addNumber(11);
 	std::cout << _CYAN << "Main_subject : " << _NC;
 	print_vector(sp);
-	std::cout << "Sort : " << sp.shortestSpan() << std::endl;
-	std::cout << "Long : " << sp.longestSpan() << std::endl;
+	std::cout << _CYAN << "Resultat short : " << _GREEN << sp.shortestSpan() << _NC << std::endl;
+	std::cout << _CYAN << "Resultat long : " << _GREEN << sp.longestSpan() << _NC << std::endl;
 }
 
 void	randomNoDoublon () {

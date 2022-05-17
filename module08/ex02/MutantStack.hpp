@@ -6,7 +6,7 @@
 /*   By: thhusser <thhusser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 12:21:07 by thhusser          #+#    #+#             */
-/*   Updated: 2022/05/17 18:01:28 by thhusser         ###   ########.fr       */
+/*   Updated: 2022/05/17 18:11:59 by thhusser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <stack>
+# include <list>
 
 template<typename T>
 class MutantStack : public std::stack<T> {
